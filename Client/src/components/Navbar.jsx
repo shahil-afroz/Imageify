@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
 function Navbar() {
-  const { user,loadCredit,logout,credit, setUser, setShowLogin, backendURL, setToken } = useContext(AppContext);
+  const { user, loadCredit, logout, credit, setUser, setShowLogin, backendURL, setToken } = useContext(AppContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    <div className='flex items-center justify-between py-4'>
+    <div className='flex items-center justify-between py-4 border-b-2 border-[#1081b6]'>
       <Link to='/'>
         <img src={assets.logo} alt="Logo" className='text-white w-28 sm:w-32 lg:w-40' />
       </Link>
