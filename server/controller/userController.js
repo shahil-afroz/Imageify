@@ -123,14 +123,14 @@ const paymentRazorPay = async (req, res) => {
             receipt: newTransaction._id,
         };
 
-        console.log("Creating Razorpay order:", options);
+       
 
         const order = await razorpayInstance.orders.create(options,(error,order)=>{
             if(error){
                 console.log("error");
                 return res.json({success:false,message:error})
             }
-            console.log("Razorpay order created:", order);
+           
             res.json({ success: true, order});
         });
         
